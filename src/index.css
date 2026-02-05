@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-romantic-50 via-romantic-100 to-pink-100 min-h-screen;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .btn-romantic {
+    @apply px-8 py-4 bg-gradient-to-r from-romantic-400 to-romantic-500 text-white 
+           rounded-full font-semibold text-lg shadow-lg hover:shadow-xl 
+           transform hover:scale-105 transition-all duration-300
+           active:scale-95 focus:outline-none focus:ring-4 focus:ring-romantic-200
+           min-h-[44px]; /* Mobile tap target */
+  }
+  
+  .card-romantic {
+    @apply bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-8 
+           border border-romantic-100/50;
+  }
+  
+  .input-romantic {
+    @apply w-full px-6 py-4 text-center text-xl border-2 border-romantic-200 
+           rounded-2xl focus:border-romantic-400 focus:outline-none focus:ring-4 
+           focus:ring-romantic-100 bg-white/90 placeholder-romantic-300
+           transition-all duration-300 min-h-[52px]; /* Better tap target */
+  }
+}
+
+@layer utilities {
+  .text-romantic-gradient {
+    @apply bg-gradient-to-r from-romantic-500 to-romantic-700 bg-clip-text text-transparent;
+  }
+  
+  /* Safe area padding for mobile notches */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fce7f3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f472b6, #ec4899);
+  border-radius: 10px;
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Soft transitions everywhere */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
