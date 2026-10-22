@@ -1,5 +1,14 @@
 # Anniversary Puzzle App 💖
 
+> A romantic anniversary web app with a date-locked entry, jigsaw puzzles and a memory journey.
+
+<p align="center">
+  <img src="docs/screenshots/desktop.jpg" width="38%" alt="Screenshot" />
+  <img src="docs/screenshots/inside.jpg" width="38%" alt="Screenshot" />
+  <img src="docs/screenshots/mobile.jpg" width="18%" alt="Screenshot" />
+</p>
+
+
 A romantic anniversary web app featuring jigsaw puzzles and love memories.
 
 ## Features
